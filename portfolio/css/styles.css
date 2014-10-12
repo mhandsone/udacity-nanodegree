@@ -1,0 +1,146 @@
+/**
+ * My Portfolio Stylesheet
+ */
+
+/**
+ * My color palette:
+ *  Pretty simple, contrast difference calls attention, 
+ *  dark hues make it easier to read, mostly blue and yellow.
+ * 
+ *  -#0535B2 - Dark blue, used for borders, maybe shadows?
+ *  -#2763FF - Light hue of blue, mostly used it for some backgrounds
+ *  -#FFB90D - Moderate hue of yellow, to easily contrast with the blue shades. Mostly for texts
+ *  -Auxiliary: #B27F00, #1F97DB
+ */
+
+/**
+ * Fonts
+ */
+@import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans);
+
+/**
+ * Typography
+ */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+
+/* Used for page headers */
+h1 {
+  font-size: 40px;
+}
+
+/* Used for section titles */
+h2 {
+  font-size: 32px;
+}
+
+/* Used for block and grid titles */
+h3 {
+  font-size: 24px;
+}
+
+/* Used for subtitles */
+h4 {
+  font-size: 20px;
+}
+
+a {
+  font-size: 14px;
+}
+
+/**
+ * Layouts
+ */
+body {
+  background: #FFB90D;
+}
+.l-header {
+  text-align: center;
+  background: #0535b2;
+  background: -moz-linear-gradient(left,  #0535b2 0%, #2763ff 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0535b2), color-stop(100%,#2763ff));
+  background: -webkit-linear-gradient(left,  #0535b2 0%,#2763ff 100%);
+  background: -o-linear-gradient(left,  #0535b2 0%,#2763ff 100%);
+  background: -ms-linear-gradient(left,  #0535b2 0%,#2763ff 100%);
+  background: linear-gradient(to right,  #0535b2 0%,#2763ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0535b2', endColorstr='#2763ff',GradientType=1 );
+
+  padding: 25px 20px;
+
+  border-bottom: 5px solid #0535B2;
+}
+
+@media (min-width: 40.063em) {
+  .l-header {
+    text-align: right;
+  }
+}
+
+.l-content {
+  padding: 30px 20px;
+}
+
+/**
+ * Header logo
+ */
+.header--logo{
+  width: 100px;
+  height: auto;
+
+  background: #1f97db;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@media (min-width: 40.063em) {
+  .header--logo {
+    float: left;
+  }  
+}
+/**
+ * Author info
+ */
+.author--name {
+  font-family: 'Pacifico', cursive;
+  color: #FFB90D;
+
+  margin-top: 0;
+}
+
+.author--subtitle {
+  color: #FFB90D;
+
+  margin-bottom: 0;
+}
+
+/**
+ * Main image
+ */
+.main-image--wrapper {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+/**
+ * Featured work
+ */
+.featured-work {
+  text-align: center;
+}
+
+@media (min-width: 40.063em) {
+  .featured-work {
+    text-align: left;
+  }  
+}
+
+/**
+ * Projects
+ */
+.project {
+  text-align: center;
+}
