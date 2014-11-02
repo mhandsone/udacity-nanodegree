@@ -14,42 +14,39 @@
  */
 
 /**
- * Fonts
- */
-@import url(http://fonts.googleapis.com/css?family=Pacifico|Open+Sans);
-
-/**
  * Typography
  */
-body, h1, h2, h3, h4, h5, h6 {
+body {
   font-family: 'Open Sans', sans-serif;
   color: #444444;
 }
-
 /* Used for page headers */
 h1 {
   font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
 }
-
 /* Used for section titles */
 h2 {
   font-size: 32px;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
 }
-
 /* Used for block and grid titles */
 h3 {
   font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
 }
-
 /* Used for subtitles */
 h4 {
   font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
 }
-
 a {
   font-size: 14px;
 }
-
 /**
  * Layouts
  */
@@ -65,27 +62,23 @@ body {
   background: -o-linear-gradient(left,  #0535b2 0%,#2763ff 100%);
   background: -ms-linear-gradient(left,  #0535b2 0%,#2763ff 100%);
   background: linear-gradient(to right,  #0535b2 0%,#2763ff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0535b2', endColorstr='#2763ff',GradientType=1 );
 
   padding: 25px 20px;
 
   border-bottom: 5px solid #0535B2;
 }
-
 @media (min-width: 40.063em) {
   .l-header {
     text-align: right;
   }
 }
-
 .l-content {
   padding: 30px 20px;
 }
-
 /**
  * Header logo
  */
-.header--logo{
+.header-logo{
   width: 100px;
   height: auto;
 
@@ -94,50 +87,44 @@ body {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-
 @media (min-width: 40.063em) {
-  .header--logo {
+  .header-logo {
     float: left;
   }  
 }
 /**
  * Author info
  */
-.author--name {
+.author-name {
   font-family: 'Pacifico', cursive;
   color: #FFB90D;
 
   margin-top: 0;
 }
-
-.author--subtitle {
+.author-subtitle {
   color: #FFB90D;
 
   margin-bottom: 0;
 }
-
 /**
  * Main image
  */
-.main-image--wrapper {
+.main-image {
   text-align: center;
 
   margin-bottom: 45px;
 }
-
 /**
  * Featured work
  */
 .featured-work {
   text-align: center;
 }
-
 @media (min-width: 40.063em) {
   .featured-work {
     text-align: left;
   }  
 }
-
 /**
  * Projects
  */
