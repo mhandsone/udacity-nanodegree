@@ -18,16 +18,16 @@
  * Headers
  */
 h1 {
-  font-size: 40px;
-  color: #F5A623;
-  line-height: 48px;
+  font-size: 48px;
+  /*color: #F5A623;*/
+  line-height: 56px;
   display: inline;
 }
 
 h2 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  /*color: #999999;*/
   line-height: 29px;
   padding: 10px;
 }
@@ -35,14 +35,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  /*color: #000000;*/
   line-height: 22px;
 }
 
 h4 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  /*color: #4A4A4A;*/
   line-height: 17px;
 }
 
@@ -57,16 +57,29 @@ h2, h3, h4, h5 {
  */
 p {
   font-size: 14px;
-  color: #333333;
+  /*color: #333333;*/
   line-height: 21px;
 }
 
 a {
-  color: #1199C3;
+  /*color: #1199C3;*/
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
+
+li {
+  list-style-type: none;
+}
+
+img {
+  padding: 10px;
+}
+
+/**
+ * Components
+ * =============================================================================
+ */
 
 /**
  * Custom entries
@@ -79,10 +92,23 @@ a {
 /**
  * Custom text
  */
+.role {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 28px;
+  padding-left: 1.5em;
+}
+
+.pill {
+  background: #7f0f05;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  /*color: #999999;*/
   line-height: 16px;
   float: left;
 }
@@ -90,48 +116,95 @@ a {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999999;
+  /*color: #999999;*/
   line-height: 16px;
   float: right;
-
 }
 
-/**
- * Components
- * =============================================================================
- */
-
-/**
- * Internationalize button
- */
-.internationalize {
-  float: right;
-}
-
-/**
- * Initial message
- */
 .welcome-message {
+  display: block;
   font-style: italic;
   font-size: 18px;
-  color: #F3F3F3;
+  /*color: #F3F3F3;*/
   line-height: 28px;
 }
 
 /**
- * Skills
+ * Graph text
  */
-#skillsH3 {
-  color: #F5AE23;
-  display: none;
+.skills-entry {
+  -webkit-box-shadow: 0px 0px 5px 1px #5E0800 inset;
+  -moz-box-shadow: 0px 0px 5px 1px #5E0800 inset;
+  box-shadow: 0px 0px 5px 1px #5E0800 inset;
 }
 
-#skills {
-  display: none;
+.axis {
+  font-size: 10px;
+  font-style: italic;
 }
+
+
+/**
+ * Layout
+ * =============================================================================
+ */
+#main {
+  -webkit-box-shadow: 0px 0px 15px 5px #B4B4B4 inset;
+  -moz-box-shadow: 0px 0px 15px 5px #B4B4B4 inset;
+  box-shadow: 0px 0px 15px 5px #B4B4B4 inset;
+}
+
+#header {
+  padding: 2em 0;
+}
+
+#footer {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 5%;
+}
+
+#footer a {
+  display: inline;
+}
+
+#mainContent {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.biopic {
+ float: right;
+ padding: 10px;
+ -webkit-box-shadow: 1px -1px 10px 1px #333333;
+ -moz-box-shadow: 1px -1px 10px 1px #333333;
+ box-shadow: 1px -1px 10px 1px #333333;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.flex-list {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
 
 .flex-item {
   display: inline-block;
+  padding: 0.5em 0;
 }
 
 /**
@@ -148,22 +221,39 @@ a {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 /**
  * Colors
  * =============================================================================
  */
+#header {
+  color: #7f0f05;
+}
+
+#mainContent {
+  background: #2382e5;
+}
+
+#sidebar {
+  background: #bf0b24;
+}
+
 .orange {
   background-color: #F5AE23;
 }
 
 .orange-text {
+  font-weight: bold;
   color: #F5AE23;
 }
 
+a.orange-text:hover {
+  color: #d7910a;
+}
+
 .white-text {
-  font-weight: bold;
   color: #FFFFFF;
 }
 
@@ -173,101 +263,36 @@ a {
   clear:both;
 }
 
+.gray-text {
+  color: #4A4A4A;
+}
+
 .dark-gray {
   background-color: #4A4A4A;
 }
 
-#header {
-  background-color: #484848;
+/**
+ * Skill chart colors
+ */
+ .bar {
+   fill: url(#barGradient);
+ }
+
+ .bar:hover {
+   fill: url(#barHoverGradient);
+ }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
 /**
- * Layout
- * =============================================================================
+ * Flexslider colors
  */
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
-img {
-  padding: 10px;
-}
-
-
-/* Bar chart stuff */
-.chart div {
-  font: 10px sans-serif;
-  background-color: #4A4A4A;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline-block;
-}
-
-span {
-  padding: 5px;
-}
-
-#letsConnect {
-  text-align: center;
-}
-
-/**
- * Media queries
- * =============================================================================
- */
-
-@media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 750px) {
-  #skillsH3,
-  #skills,
-  .biopic {
-    display: block;
-  }
+.flex-direction-nav a {
+  color: #ffffff;
+  overflow: visible;
 }

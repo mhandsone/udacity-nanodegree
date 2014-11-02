@@ -1,0 +1,34 @@
+{
+  "values": [
+    {
+      "skill" : "HTML",
+      "proficiency" : 5
+    },
+
+    {
+      "skill" : "CSS",
+      "proficiency" : 5
+    },
+
+    {
+      "skill" : "Javascript",
+      "proficiency" : 4
+    },
+
+    {
+      "skill" : "PHP",
+      "proficiency" : 4
+    },
+    
+    {
+      "skill" : "Drupal",
+      "proficiency" : 4
+    },
+    
+    {
+      "skill" : "Java",
+      "proficiency" : 4
+    }
+  ]
+}
+

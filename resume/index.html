@@ -15,9 +15,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
+  <title>Cristiano Amici | Resume</title>
   <!-- Foundation CSS-->
-  <link href="http://cdn.foundation5.zurb.com/foundation.css" rel="stylesheet" type="text/css"></link>
-  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+  <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
+  <!-- Flexslider CSS -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
@@ -39,6 +42,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- D3.js -->
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <!-- Flexslider JS -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
+
+  <!-- Equalize JS -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js"></script>
   
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
@@ -53,36 +62,48 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body unresolved>
-  <div id="main" >
+  <div id="main">
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-    <div id="header">
-      <ul id="topContacts" class='flex-box'></ul>
-    </div>
+    <div id="header" class="row"></div>
     <div style='clear: both;'></div>
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
+    <div id="body" class="row">
+      <div id="mainContent" class="large-8 columns">
+        <div id="workExperience" class="white-text">
+          <h2 class="white-text">Work Experience</h2>
+        </div>
+        <hr>
+        <div id="education" class="white-text">
+          <h2 class="white-text">Education</h2>
+        </div>
+      </div>
+      <div id="sidebar" class="large-4 columns">
+        <div id="skillsChart" class="show-for-medium-up">
+          <h2 class="white-text">Skills Chart</h2>
+        </div>
+        <hr>
+        <ul id="topContacts"></ul>
+      </div>
     </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class='gray'>
-      <h2>Education</h2>
-    </div>
-    <div id="skillsChart">
-      <h2>Skills Chart</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="letsConnect" class='dark-gray'>
-      <h2 class='orange center-text'>Let's Connect</h2>
-      <ul id="footerContacts" class="flex-box">
-      </ul>
+    
+    <div class="row">
+      <div id="projects">
+        <h2>Projects</h2>
+      </div>
+
+      <div id="mapDiv"class="panel radius">
+        <h2>Where I've Lived and Worked</h2>
+      </div>
+
+      <div id="footer" class="gray-text">
+        <span>
+          Copyright 2014. Special thanks to <a href="http://glyphicons.com">Glyphicons.com</a>
+        </span>
+      </div>
     </div>
   </div>
 
@@ -92,7 +113,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
-
 
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
@@ -141,5 +161,21 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   if(document.getElementById("map") == undefined) {
     document.getElementById("mapDiv").style.display = "none";
   }
+
+  /**
+   * Start Flexslider.
+   */
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+      animation : 'slide',
+      prevText : '',
+      nextText : ''
+    });
+
+    /**
+     * Start Equalize.
+     */
+    $('#body').equalize();
+  });
   </script>
 </body>
